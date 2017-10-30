@@ -39,10 +39,17 @@ div {
 
 #close {
   float: right;
+  padding: .5em;
   width: 12px;
   height: 12px;
   margin-bottom: 2em;
   cursor: pointer;
+}
+
+#close:hover {
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: .5em;
 }
 
 cursor {

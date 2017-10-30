@@ -1,10 +1,15 @@
 $(function() {
 
 
+
+
   $('.table').on('click', function() {
+
+    let tableNum = $(this).text();
     $('.form').css('display', 'flex');
     $(this).addClass('reserved');
-    $('#table-number').text('Table Number: ');
+    $('#table-number').text('Table Number: ' + tableNum);
+
   });
 
   $('#save').on('click', function() {
