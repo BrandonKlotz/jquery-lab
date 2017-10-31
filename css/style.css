@@ -46,12 +46,6 @@ div {
   cursor: pointer;
 }
 
-#close:hover {
-  border: 1px solid #eee;
-  border-radius: 2px;
-  padding: .5em;
-}
-
 cursor {
 
 }
