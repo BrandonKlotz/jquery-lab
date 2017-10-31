@@ -1,6 +1,7 @@
 $(function() {
 
-  $('.table').on('click', function() {
+  $('.table').on('click', function reserveTable() {
+
 
     let tableNum = $(this).text();
     $('.form').css('display', 'flex');
@@ -10,12 +11,11 @@ $(function() {
 
   $('#save').on('click', function() {
     $('.form').css('display', 'none');
-    // $(this).addClass('.reserved');
   });
 
   $('#close').on('click', function() {
+    $(table).removeClass('reserved');
     $('.form').css('display', 'none');
-    $().removeClass('reserved');
   });
 
 });
