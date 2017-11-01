@@ -188,7 +188,7 @@ button:focus:not(:active)::after {
 }
 
 .details {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   text-align: center;
