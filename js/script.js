@@ -1,6 +1,5 @@
-$(function() {
+(function() {
 
-<<<<<<< HEAD
   $(".details").hide();
 
   let form = $('.form');
@@ -28,60 +27,19 @@ $(function() {
 
       form.animate({height: '500px'});
       form.animate({top: '-600px'}, 350, 'linear');
-    
+
     });
 
     $('#close').click(function cancelReservation() {
 
       selectedTable.removeClass('selected');
-
-      $("#reserveName").val("");
-      $("#reserveSize").val("");
-      $("#reservePhone").val("");
-=======
-  $('.table').on('click', function reserveTable() {
-
-    let table = $(this);
-    let tableNum = $(this).text();
-    $('.form').css('display', 'flex');
-    $(this).addClass('reserved');
-    $('#table-number').text('Table Number: ' + tableNum);
-
-    $('#save').on('click', function() {
-      $('.form').css('display', 'none');
-    });
-
-    $('#close').on('click', function() {
-      $(table).removeClass('reserved');
-      $(table).addClass('available');
-      $('.form').css('display', 'none');
-    });
-  });
->>>>>>> parent of d1d6412... Update Reserve Functionality and Animations
-
       form.animate({height: '500px'});
       form.animate({top: '-600px'}, 350, 'linear');
 
-<<<<<<< HEAD
       return false;
 
     });
+
   });
 
-  function submitReservation() {
-
-    let partyName = $('party-name').val();
-    let partySize = $('party-size').val();
-    let partyTel = $('party-num').val();
-
-    $('party-name').val("");
-    $('party-size').val("");
-    $('party-num').val("");
-
-    }
-
 })();
-=======
-
-});
->>>>>>> parent of d1d6412... Update Reserve Functionality and Animations
