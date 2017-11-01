@@ -6,6 +6,18 @@ h1, h3 {
   color: red;
 }
 
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 0px;
+  line-height: 12px;
+}
+
 span {
   font-family: 'Source Code Pro', monospace;
   font-size: 1em;
@@ -22,86 +34,6 @@ div {
   font-family: sans-serif;
 }
 
-.form {
-  padding: 1.5em;
-  display: none;
-  position: absolute;
-  top: 240px;
-  margin-left: -310px;
-  flex-direction: column;
-  left: 50%;
-  width: 575px;
-  height: 500px;
-  z-index: 2;
-  box-shadow: 0px 0px 20px #ccc;
-}
-
-#close {
-  float: right;
-  padding: .5em;
-  width: 12px;
-  height: 12px;
-  margin-bottom: 2em;
-  cursor: pointer;
-}
-
-cursor {
-
-}
-
-h1 {
-  font-size: 4em;
-  font-weight: bold;
-  line-height: 10px;
-}
-
-h3 {
-  font-size: 2em;
-  margin-top: 0px;
-  line-height: 12px;
-}
-
-.table-container {
-  margin: 0 auto;
-  width: 500px;
-  height: 450px;
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-}
-
-.table-container, .form {
-  background-color: #fff;
-  border-radius: 5px;
-}
-
-.table {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #A3A0A0;
-  margin: 1em;
-  font-size: 1.5em;
-  background-color: #EBEBEB;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-}
-
-.table:hover {
-  width: 96px;
-  height: 96px;
-  border: 2px dashed #eee;
-  background-color: #fff;
-}
-
-.top {
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 4em;
-}
 
 input {
 	border: none;
@@ -116,7 +48,6 @@ input:focus {
   outline-style: none;
 	border: 2px dashed #eee;
 }
-
 
 button {
   background: #008700;
@@ -167,42 +98,93 @@ button:focus:not(:active)::after {
   animation: ripple 1s ease-out;
 }
 
+.form {
+  padding: 1.5em;
+  display: none;
+  position: absolute;
+  top: -100%;
+  margin-left: -310px;
+  flex-direction: column;
+  left: 50%;
+  width: 575px;
+  height: 500px;
+  z-index: 10;
+  box-shadow: -2px 0px 20px #bbb;
+  transition: all .35s;
+  transition-timing-function: cubic-bezier(0.05, 1, 0.265, 1.55);
+}
 
-.available {
+.table-container {
+  margin: 0 auto;
+  width: 500px;
+  height: 450px;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.table-container, .form {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.table {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #A3A0A0;
+  /*color: #A3A0A0;*/
   margin: 1em;
   font-size: 1.5em;
-  background-color: #EBEBEB;
+  /*background-color: #EBEBEB;*/
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
 
-.available:hover {
-  background-color: #fff;
-  box-shadow: inset 0 0 0 5px #ccc;
+.top {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4em;
 }
 
-.reserved {
-  background-color: #A3A0A0;
-  color:  #EBEBEB;
-  cursor: not-allowed;
+.available {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   color: #A3A0A0;
+   margin: 1em;
+   font-size: 1.5em;
+   background-color: #EBEBEB;
+   width: 100px;
+   height: 100px;
+   border-radius: 100%;
+ }
+
+ .available:hover {
+   background-color: #fff;
+   box-shadow: inset 0 0 0 5px #53a7ea;
+ }
+
+ .reserved {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #A3A0A0;
+   color:  #EBEBEB;
+   margin: 1em;
+   font-size: 1.5em;
+   width: 100px;
+   height: 100px;
+   border-radius: 100%;
+   cursor: not-allowed;
 }
 
 .reserved:hover {
-  width: 92px;
-  height: 92px;
   background-color: #A3A0A0;
   color:  #EBEBEB;
-  border: 4px solid #555;
+  box-shadow: inset 0 0 0 5px #555;
   cursor: not-allowed;
-}
-
-#alert {
-  color: red;
 }
 
 .details {
@@ -223,3 +205,17 @@ button:focus:not(:active)::after {
   box-shadow: 0px 4px 10px #777;
   border: 4px solid #555;
   border-radius: 10px;
+}
+
+#alert {
+  color: red;
+}
+
+#close {
+  float: right;
+  padding: .5em;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
