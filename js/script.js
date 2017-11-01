@@ -1,24 +1,42 @@
-$(function() {
+(function() {
 
-  $('.table').on('click', function reserveTable() {
+  $('.available').on('click', function reserveTable() {
 
-    let table = $(this);
     let tableNum = $(this).text();
+
+    if ($(this).hasClass('reserved')) {
+      return false;
+    }
+
+    $(this).addClass('selected');
+
+    $('.form').animate({width: '575px'});
+    $('.form').animate({height: '500px'});
+    $('.form').animate({top: '240px'});
     $('.form').css('display', 'flex');
-    $(this).addClass('reserved');
+
+
     $('#table-number').text('Table Number: ' + tableNum);
 
-    $('#save').on('click', function() {
-      $('.form').css('display', 'none');
+
+
+    $('#save').click(function saveReservation() {
+        $('.selected').addClass('reserved');
+        $('.selected').removeClass('available');
+        $('.selected').removeClass('selected');
+
+        $('.form').animate({height: '500px'});
+        $('.form').animate({top: '-600px'}, 350, 'linear');
     });
 
-    $('#close').on('click', function() {
-      $(table).removeClass('reserved');
-      $(table).addClass('available');
-      $('.form').css('display', 'none');
+    $('#close').click(function cancelReservation() {
+        $('.selected').removeClass('selected');
+
+        $('.form').animate({height: '500px'});
+        $('.form').animate({top: '-600px'}, 350, 'linear');
     });
+
+
   });
 
-
-
-});
+})();
