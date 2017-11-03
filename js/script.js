@@ -15,7 +15,7 @@
     $('.form').animate({width: '575px'});
     $('.form').animate({height: '500px'});
     $('.form').animate({top: '240px'});
-    $('.form').css('display','flex');
+    $('.form').css('display', 'flex');
     }
 
   });
