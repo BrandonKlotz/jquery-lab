@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:900');
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 
 h1, h3 {
-  font-family: 'Titillium Web', sans-serif;
-  color: red;
+  font-family: sans-serif;
+  color: #FF6700;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
   line-height: 10px;
 }
@@ -19,7 +18,7 @@ h3 {
 }
 
 span {
-  font-family: 'Source Code Pro', monospace;
+  font-family: sans-serif;
   font-size: 1em;
   margin-bottom: 2em;
 }
@@ -27,7 +26,7 @@ span {
 body {
   margin: 0 auto;
   padding: 2em;
-  background-color: #EADBD8;
+  background-color: #eee;
 }
 
 div {
@@ -50,7 +49,7 @@ input:focus {
 }
 
 button {
-  background: #008700;
+  background: #004E98;
 	font-size: 1em;
 	color: white;
 	width: 100%;
@@ -58,11 +57,12 @@ button {
 	border-radius: 0px;
   position: relative;
   overflow: hidden;
+  font-weight: bold;
 }
 
 button:hover {
   box-shadow: 0px 10px 20px #eee;
-  background: #009900;
+  background: #3A6EA5;
 }
 
 button:after {
@@ -109,7 +109,7 @@ button:focus:not(:active)::after {
   width: 575px;
   height: 500px;
   z-index: 10;
-  box-shadow: -2px 0px 20px #bbb;
+  box-shadow: 0px 2px 12px #ccc;
   transition: all .35s;
   transition-timing-function: cubic-bezier(0.05, 1, 0.265, 1.55);
 }
@@ -122,6 +122,7 @@ button:focus:not(:active)::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  box-shadow: 0px 4px 10px #ccc;
 }
 
 .table-container, .form {
@@ -133,10 +134,8 @@ button:focus:not(:active)::after {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /*color: #A3A0A0;*/
   margin: 1em;
   font-size: 1.5em;
-  /*background-color: #EBEBEB;*/
   width: 100px;
   height: 100px;
   border-radius: 100%;
@@ -213,7 +212,7 @@ button:focus:not(:active)::after {
 }
 
 #alert {
-  color: red;
+  color: #FF6700;
   margin-top: .25em;
   padding: 1em;
   text-align: center;
@@ -226,4 +225,10 @@ button:focus:not(:active)::after {
   height: 12px;
   margin-bottom: 2em;
   cursor: pointer;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  padding: 1em;
 }
